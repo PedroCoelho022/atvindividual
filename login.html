@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="login.css" media="screen" />
+    <style>
+        .rotate {
+            animation: spin 1s ease forwards;
+        }
+
+        @keyframes spin {
+            0% { transform: rotate(0deg); }
+            100% { transform: rotate(720deg); }
+        }
+    </style>
+</head>
+<body>
+    <div class="tarja"></div>
+    <div class="tudo">
+        <div class="retangulo1">
+            <img src="logo.png" width="180px" >
+            <h1 id="titulo">LOGIN</h1>
+            <img id="userIcon" src="usuario.png" width="70px">
+            <div class="escritas">
+                <input type="number" id="barra1" placeholder="CNPJ">
+                <input type="password" id="barra2" placeholder="Senha">
+            </div>
+            <div class="esqueci"><p><a href="esqueci.html">Esqueci a senha</a></p></div>
+            <div class="botoes">
+                <a href="cadastro.html">
+                <input type="button" id="botao1" value="Cadastro">
+            </a>
+                <input type="button" id="botao2" value="Login">
+            </div>
+            <div class="tarja2"></div>
+        </div>
+        <div class="retangulo2">
+            <div class="classe"></div>
+        </div>
+    </div>
+
+    <script>
+        document.getElementById("botao2").addEventListener("click", function() {
+
+            document.getElementById("titulo").innerText = "Bem-vindo!";
+            document.getElementById("userIcon").classList.add("rotate");
+
+            setTimeout(function() {
+                window.location.href = "principal.html"; 
+            }, 1000); 
+        });
+    </script>
+    
+</body>
+</html>
